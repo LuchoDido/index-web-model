@@ -1,0 +1,342 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Header */
+
+header {
+    height: 115px;
+    background:darkslateblue;
+    padding: 0 50px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 115px;
+    height: 115px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-left: 0;
+    cursor:pointer;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0 30px;
+    transition: 0.4s;
+    border-right: 1px solid white;
+}
+
+#menu-last-child {
+    border-right: none;
+}
+
+.mostrar-menu,
+.esconder-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.mostrar-menu {
+    order: 1;
+}
+
+.menu a:hover,
+.mostrar-menu,
+.esconder-menu {
+    color:springgreen;
+}
+
+#check {
+    display: none;
+}
+
+/* Banner */
+
+#banner {
+    padding: 0 50px;
+    background-image: url(media/ben-neale-zpxKdH_xNSI-unsplash.jpg);
+    height: 85vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner::before {
+    content: '';
+    background: rgba(77,77,92, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 85vh;
+    left: 0;
+}
+
+.contenido-banner {
+    position: relative;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenido-banner h3 {
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+.contenido-banner h3 span {
+    font-weight: 600;
+}
+
+.boton-empezar {
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    background: darkslateblue;
+    padding: 20px 40px;
+    align-self: baseline;
+}
+
+.boton-empezar:hover {
+    background:springgreen;
+    color: black;
+    transition: 0.4s;
+}
+
+/* Games */
+
+#joystick {
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#joystick img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+#joystick div {
+    padding: 30px 30px;
+}
+
+#joystick div h4 {
+    font-size: 22px;
+    color: darkslateblue;
+    margin: 15px 0;
+}
+
+#joystick div p {
+    color: darkred;
+    font-size: 18px;
+}
+
+.boton-ver-mas {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid black;
+    background: black;
+    padding: 20px 40px;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: all 0.4s;
+}
+
+.boton-ver-mas:hover {
+    color: black;
+    background: springgreen;
+    border: 1px solid black;
+}
+
+/* Iconos */
+
+#iconos {
+    padding: 0 50px;
+    background: black;
+    color: white;
+}
+
+.contenido-iconos {
+    padding: 50px 50px 0 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.contenido-iconos div {
+    flex: 1;
+    margin: 20px 0;
+    border-right: 2px solid white;
+}
+
+#icono-mobile {
+    border: none;
+}
+
+.contenido-iconos div h6 {
+    font-size: 18px;
+    font-weight: 100;
+    margin: 10px 0;
+}
+
+.boton-iconos {
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+
+.boton-ver-mas-iconos {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    background: darkslateblue;
+    padding: 20px 40px;
+    border-radius: 30px;
+    align-self: baseline;
+    margin-top: 15px;
+}
+
+.boton-ver-mas-iconos:hover {
+    color: black;
+    background: springgreen;
+    transition: all 0.4s;
+}
+
+/* Formulario */
+
+#contacto {
+    background: darkslateblue;
+    color: white;
+    padding: 50px 0;
+}
+
+#contacto h4 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 35px;
+}
+
+#contacto form {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.datos-form {
+    display: flex;
+}
+
+.datos-form div {
+    padding: 10px;
+    flex: 1;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+    border-radius: 10px;
+    padding: 10px 5px;
+    border: 2px solid black;
+    outline: 0;
+    width: 100%;
+}
+
+.mensaje {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* Footer */
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+    /* Header */
+    .mostrar-menu,
+    .esconder-menu {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        width: 40%;
+        height: 100vh;
+        background: darkslateblue;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0;
+        z-index: 100;
+        transition: 0.8s;
+    }
+
+    .menu a {
+        display: block;
+        padding: 20px;
+    }
+
+    .esconder-menu {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #check:checked ~ .menu {
+        right: 0;
+    }
+
+    /* Joystick */
+
+    #joystick {
+        flex-direction: column;
+    }
+
+    /* Iconos */
+    
+    .contenido-iconos {
+        flex-direction: column;
+    }
+
+    .contenido-iconos div {
+        border-bottom: 2px solid white;
+        border-right: none;
+        padding-bottom: 15px;
+    }
+
+    #icono-mobile {
+        border-bottom: 2px solid white;
+        border-right: none;
+        padding-bottom: 15px;
+    }
+
+    .datos-form {
+        flex-direction: column;
+    }
+}
